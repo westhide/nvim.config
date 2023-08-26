@@ -1,4 +1,5 @@
 return {
+    -- https://github.com/hrsh7th/nvim-cmp
     "hrsh7th/nvim-cmp",
     dependencies = {
         -- https://github.com/onsails/lspkind.nvim
@@ -11,14 +12,14 @@ return {
     },
     event = "InsertEnter",
     config = function()
-        local cmp = require("cmp")
+        local cmp = require "cmp"
         cmp.setup {
             views = {
                 entries = "native"
             },
             snippet = {
                 expand = function(args)
-                    require("luasnip").lsp_expand(args.body)
+                    require "luasnip".lsp_expand(args.body)
                 end
             },
             window = {
@@ -36,7 +37,7 @@ return {
                 { name = "luasnip" }
             },
             formatting = {
-                format = require("lspkind").cmp_format {
+                format = require "lspkind".cmp_format {
                     mode = "symbol",
                     ellipsis_char = "...",
                 }

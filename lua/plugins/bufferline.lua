@@ -3,7 +3,6 @@ return {
     "akinsho/bufferline.nvim",
     dependencies = {
         "echasnovski/mini.bufremove",
-        "utilyre/barbecue.nvim",
         "nvim-tree/nvim-web-devicons"
     },
     event = { "BufReadPost", "BufNewFile" },

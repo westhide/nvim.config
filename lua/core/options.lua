@@ -1,6 +1,7 @@
 -- https://neovim.io/doc/user/options.html
 
-SET_OPTIONS {
+for key, val in pairs
+{
     autowrite = true,
     clipboard = "unnamedplus",
     completeopt = "menu,preview",
@@ -10,7 +11,7 @@ SET_OPTIONS {
     ignorecase = true,
     inccommand = "nosplit",
     laststatus = 0,
-    list = true,
+    -- list = true,
     mouse = "a",
     number = true,
     pumblend = 10,
@@ -38,3 +39,4 @@ SET_OPTIONS {
     winminwidth = 5,
     wrap = false,
 }
+do vim.opt[key] = val end
