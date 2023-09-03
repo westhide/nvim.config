@@ -13,7 +13,7 @@ return {
     },
     opts = {
         defaults = {
-            prompt_prefix = " ",
+            prompt_prefix = "🔍 ",
             selection_caret = " ",
             path_display = { "smart" },
         },
@@ -23,7 +23,10 @@ return {
                 override_generic_sorter = true,
                 override_file_sorter = true,
                 case_mode = "smart_case",
-            }
+            },
+            ["ui-select"] = {
+                require "telescope.themes".get_dropdown {},
+            },
         },
     },
 }
